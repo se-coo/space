@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{height: 100%; font-size: 3rem; background: black;}
+
+		@keyframes spin{
+			to{transform: rotateY(360deg);
+			}
+		}
+
+		@keyframes plan{
+			to{transform: rotateY(360deg);
+			}
+		}
+
+		.stage{display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			height: 100vh;
+			background: black;
+			perspective: 970px;}
+
+		.carousel{
+			position: relative;
+			width: 1000px;
+			height: 1000px;
+			transform-style: preserve-3d;
+			animation: spin 80s infinite linear;
+
+		}
+
+		.panel {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url(1.gif);
+			opacity:0.5; 
+			position: absolute;
+			left: 0;
+			top:0;
+			width:  1000px;
+			height: 1000px;}
+
+		.panel:nth-child(1) {transform: rotateY(0deg)translateZ(970px);}
+		.panel:nth-child(2) {transform: rotateY(60deg)translateZ(970px);}
+		.panel:nth-child(3) {transform: rotateY(120deg)translateZ(970px);}
+		.panel:nth-child(4) {transform: rotateY(180deg)translateZ(970px);}
+		.panel:nth-child(5) {transform: rotateY(240deg)translateZ(970px);}
+		.panel:nth-child(6) {transform: rotateY(300deg)translateZ(970px);}
+		.panel:nth-child(7) {transform: rotateX(90deg)translateZ(600px);}
+		.panel:nth-child(8) {transform: rotateX(90deg)translateZ(-600px);}
+
+		.space {display: flex;
+			position: absolute;
+			left: 50%;
+			top:65%;
+			width: 50vw;
+			perspective: 1500px;
+			transform: rotateX(0deg);
+			}
+
+		.carousel2{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;
+
+		}
+		.panel2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.5);
+			opacity:0.5; 
+			position: absolute;
+			left: 0;
+			top:0;
+			width:  10px;
+			height: 0px;}
+
+
+
+		.panel2:nth-child(1) {transform: translateZ(0px) rotateY(0deg) ; 
+}
+		.panel2:nth-child(2) {transform: translateZ(500px)translateX(-100px) rotateY(50deg); 
+			}
+		.panel2:nth-child(3) {transform: translateZ(-500px)translateX(-500px) rotateY(100deg);
+			}
+		.panel2:nth-child(4) {transform: translateZ(-500px)translateX(-800px)  rotateY(150deg);
+			}
+		.panel2:nth-child(5) {transform: translateZ(-500px)translateX(400px) rotateY(200deg);
+			}
+		.panel2:nth-child(6) {transform: translateZ(500px)translateX(500px) rotateY(250deg);
+			}
+		.panel2:nth-child(7) {transform: translateZ(1000px)translateX(1000px) rotateY(300deg) ;
+			}
+		.panel2:nth-child(8) {transform: translateZ(1200px) rotateY(360deg) ;
+			}
+		
+		#a{
+			
+		}
+		#b{animation: plan 5s infinite linear;
+			
+
+		}
+		#c{
+			animation: plan 10s infinite linear;
+
+		}
+		#d{animation: plan 13s infinite linear;
+
+		}
+		#e{
+			animation: plan 15s infinite linear;
+
+		}
+		#f{
+			animation: plan 20s infinite linear;
+
+		}
+		#g{
+			animation: plan 70s infinite linear;
+
+		}
+		#h{animation: plan 80s infinite linear;
+}
+
+	</style>
+</head>
+
+<body>
+	<div class="stage">
+		<div class="carousel">
+			<div class="panel">1</div>
+			<div class="panel">2</div>
+			<div class="panel">3</div>
+			<div class="panel">4</div>
+			<div class="panel">5</div>
+			<div class="panel">6</div>
+			<div class="panel">7</div>
+			<div class="panel">8</div>
+		</div>
+	</div>
+	
+	<div class="space">
+		<div class="carousel2"> 
+		<div class="panel2" id="a">
+			<img src="sun.png"></div>
+		<div class="panel2" id="b">
+			<img src="gol.png" style="width:100px; height: 100px;">
+		</div>
+		<div class="panel2" id="c">
+			<img src="ear.png" style="width:80px; height: 80px;">
+		</div>
+		<div class="panel2" id="d"><img src="mars.png" style="width:80px; height: 80px;">
+		</div>
+		<div class="panel2" id="e"><img src="mercu.png" style="width:80px; height: 80px;"></div>
+		<div class="panel2" id="f"><img src="jupi.png" style="width:80px; height: 80px;"></div>
+		<div class="panel2" id="g"><img src="sun.png"style="width:80px; height: 80px;"></div>
+		<div class="panel2" id="h"><img src="sun.png"style="width:80px; height: 80px;"></div>
+		</div>
+	</div>
+
+	<script>
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("b").onmouseover = function() {mouseOver()};
+	document.getElementById("b").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+	document.getElementById("a").onmouseover = function() {mouseOver()};
+	document.getElementById("a").onmouseout = function() {mouseOut()};
+
+
+
+	function mouseOver() {
+  	document.getElementById("a").style.opacity = "1";}
+  	
+	function mouseOut() {
+ 	 document.getElementById("a").style.opacity = "0.5";}
+ 	
+</script>
+
+</body>
+</html>
